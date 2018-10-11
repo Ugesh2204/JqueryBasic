@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery Demo</title>
+        <script type="text/javascript" src="zlib/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+
+        <script>
+            $(document).ready(function(){
+
+                $("#myButton").click(function(){
+                    //Read value
+                   var myVal = $("#myTextbox").val();
+                   //display value
+                   $("#myDiv").html("<b>"+ myVal +"</b>");
+
+                });
+            });
+        </script>
+<!-- 
+        when i click the button it will take jon wick and write it in mydiv -->
+
+        <input type="text" id="myTextbox" value="Johnwick"/>
+
+        <input type="button" id="myButton" value="clickMe"/>
+
+        <div id="myDiv">This my Div</div>
+      
+    </body>
+
+</html>

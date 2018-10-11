@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery Demo</title>
+        <script type="text/javascript" src="zlib/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+
+        <script>
+            $(document).ready(function(){
+
+                $("#myButton").click(function (){
+
+                   
+                    var myArray = [1, 2, 3, 4];
+                    var result ="<ul>";
+                    $.each(myArray, function (index, item) {
+                       var listItem = "<li>" + item + "</li>";
+                       result += listItem;
+                    });
+                    result +="</ul>";
+                    //document.write(result);
+
+                    $("#myDiv").append(result);
+    
+
+                });
+               
+
+
+            });
+        </script>
+
+        <input type="button" id="myButton" value="clickMe"/>
+
+        <div id="myDiv">This my Div</div>
+      
+    </body>
+
+</html>

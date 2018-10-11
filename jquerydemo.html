@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery Demo</title>
+        <script type="text/javascript" src="zlib/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+
+        <script>
+            $(document).ready(function(){
+
+                //Assume this is the result we r getting from database
+              var employees = [{id: 1, name: 'Wick'},
+                               {id: 2, name: 'Black'},
+                               {id: 3, name: 'Peter'}];
+
+                var myTable="<table border=1px>"+
+                    "<thead><tr><th>ID</th><th>Name</th></tr></thead><tbody>";
+                
+                $.each(employees, function(index, item){
+
+                    var myRow="<tr><td>" + item.id + "</td><td>" + item.name + "</td></tr>";
+
+                    //Am appemding each row 
+                    myTable += myRow;
+                });  
+
+                myTable += "</tbody></table>"
+                
+                //come out of loop add to my div
+
+                $("#myDiv").html(myTable);
+            });
+        </script>
+ 
+       
+
+        <input type="text" id="myTextbox" value="Johnwick"/>
+
+        <input type="button" id="myButton" value="clickMe"/>
+
+        <div id="myDiv">This my Div</div>
+      
+    </body>
+
+</html>
